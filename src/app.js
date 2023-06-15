@@ -25,8 +25,6 @@ window.onload = function() {
         }
       }
     }
-
-    return dominio;
   }
   // const dominios =
   generadorDominio();
