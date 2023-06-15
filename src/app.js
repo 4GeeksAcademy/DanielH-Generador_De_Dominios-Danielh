@@ -7,35 +7,31 @@ import "./style.css";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
 
-  var pronoun = ["Chocobuda", "Enfocando", "Jefe", Sísifo];
-  var adj = ["great", "big"];
-  var noun = ["jogger", "racoon"];
+  const dominio = [];
+  var extensiones = [".com", ".es", ".net", ".org"];
+  var pronoun = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
+  var adj = ["Código", "1001", "Hacker", "Gratis"];
+  var noun = ["Fashion", "Nómada", "Criatura ", "Arquitectos"];
+
+  function generadorDominio() {
+    for (let i = 0; i < pronoun.length; i++) {
+      for (let a = 0; a < adj.length; a++) {
+        for (let r = 0; r < noun.length; r++) {
+          for (let e = 0; e < extensiones.length; e++) {
+            let domioRandom = pronoun[i] + adj[a] + noun[r] + extensiones[e];
+            dominio.push(domioRandom);
+          }
+        }
+      }
+    }
+
+    return dominio;
+  }
+  // const dominios =
+  generadorDominio();
+  const dominioElement = document.getElementById("dominio");
+
+  const dominioAleatorio = dominio[Math.floor(Math.random() * dominio.length)];
+  dominioElement.innerHTML = dominioAleatorio;
 };
-
-// Instrucciones
-// Crea un script que genere todas las combinaciones posibles de nombres de dominio de una lista de pronombres, adjetivos y sustantivos, por ejemplo:
-
-//   var pronoun = ['the','our'];
-//   var adj = ['great', 'big' ];
-//   var noun = ['jogger','racoon'];
-// Debes generar algo como:
-
-// thegreatjogger.com
-// thegreatracoon.com
-// ourgreatjogger.com
-// ourgreatracoon.com
-// thebigjogger.com
-// thebigracoon.com
-// ourbigjogger.com
-// ourbigracoon.com
-// 💡Sugerencias
-// Deberás usar los bucles o loops anidados para mezclar los diferentes valores.
-
-// Tus herramientas: Para bucles o loops, concatenación de strings.
-
-// 😎 ¿Te sientes con confianza?
-// Agrega varios tipos de extensiones, por ejemplo: .com, .net, .us, .io, etc.
-
-// Agrega "domain hacks" donde la extensión forma parte del dominio, por ejemplo: En lugar de puedes.com el "hack" sería pued.es porque sigue diciendo "puedes" pero se aprovecha la extensión .es.

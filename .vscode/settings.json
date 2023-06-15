@@ -3,5 +3,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "workbench.editorAssociations": {   
         "*.md": "vscode.markdown.preview.editor"
-    }
+    },
+    "liveServer.settings.multiRootWorkspaceName": "DanielH-Generador_De_Dominios-Danielh"
 }
