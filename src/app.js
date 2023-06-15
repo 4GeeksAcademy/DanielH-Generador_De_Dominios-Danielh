@@ -12,7 +12,7 @@ window.onload = function() {
   var extensiones = [".com", ".es", ".net", ".org"];
   var pronoun = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
   var adj = ["Código", "1001", "Hacker", "Gratis"];
-  var noun = ["Fashion", "Nómada", "Criatura ", "Arquitectos"];
+  var noun = ["Fashion", "Nómada", "Criatura", "Arquitectos"];
 
   function generadorDominio() {
     for (let i = 0; i < pronoun.length; i++) {
@@ -30,7 +30,7 @@ window.onload = function() {
   }
   // const dominios =
   generadorDominio();
-  const dominioElement = document.getElementById("dominio");
+  const dominioElement = document.querySelector("#dominio");
 
   const dominioAleatorio = dominio[Math.floor(Math.random() * dominio.length)];
   dominioElement.innerHTML = dominioAleatorio;
