@@ -7,7 +7,6 @@ import "./style.css";
 
 window.onload = function() {
   //write your code here
-
   const dominio = [];
   var extensiones = [".com", ".es", ".net", ".org"];
   var pronoun = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
