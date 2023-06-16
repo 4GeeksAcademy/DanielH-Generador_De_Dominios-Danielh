@@ -7,13 +7,14 @@ import "./style.css";
 
 window.onload = function() {
   //write your code here
-  const dominio = [];
-  var extensiones = [".com", ".es", ".net", ".org"];
-  var pronoum = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
-  var adj = ["Código", "1001", "Hacker", "Gratis"];
-  var noum = ["Fashion", "Nómada", "Criatura", "Arquitectos"];
+  // const dominio = [];
+  // var extensiones = [".com", ".es", ".net", ".org"];
+  // var pronoum = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
+  // var adj = ["Código", "1001", "Hacker", "Gratis"];
+  // var noum = ["Fashion", "Nómada", "Criatura", "Arquitectos"];
 
-  function generadorDominio() {
+  function generadorDominio(pronoum, adj, noum, e) {
+    let dominio = [];
     for (let i = 0; i < pronoum.length; i++) {
       for (let a = 0; a < adj.length; a++) {
         for (let r = 0; r < noum.length; r++) {
@@ -24,12 +25,25 @@ window.onload = function() {
         }
       }
     }
+    return dominio;
   }
 
+  var finales = [".com", ".es", ".net", ".org"];
+  var primero = ["Chocobuda", "Enfocando", "Jefe", "Sisifo"];
+  var segundo = ["Código", "1001", "Hacker", "Gratis"];
+  var tercero = ["Fashion", "Nómada", "Criatura", "Arquitectos"];
+  let listaDominiosAleatorios = generadorDominio(
+    primero,
+    segundo,
+    tercero,
+    finales
+  );
   // const dominios =
-  generadorDominio();
+  // generadorDominio();
+
   const dominioElement = document.querySelector("#dominio");
 
-  const dominioAleatorio = dominio[Math.floor(Math.random() * dominio.length)];
+  const dominioAleatorio =
+    listaDominiosAleatorios[Math.floor(Math.random() * dominio.length)];
   dominioElement.innerHTML = dominioAleatorio;
 };
