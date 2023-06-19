@@ -2,9 +2,6 @@
 import "bootstrap";
 import "./style.css";
 
-// import "./assets/img/rigo-baby.jpg";
-// import "./assets/img/4geeks.ico";
-
 window.onload = function() {
   function generadorDominio(pronoum, adj, noum, dom) {
     let dominio = [];
@@ -18,7 +15,7 @@ window.onload = function() {
         }
       }
     }
-    // console.log(dominio);
+
     return dominio;
   }
 
@@ -27,7 +24,7 @@ window.onload = function() {
   var tercero = ["Fashion", "Nómada", "Criatura", "Arquitectos"];
   var finales = [".com", ".es", ".net", ".org"];
 
-  // inicio listado aleatorio e inclusion en index
+  // inicio listado aleatorio e inclusion en index.html
 
   let listaDominiosAleatorios = generadorDominio(
     primero,
@@ -43,9 +40,7 @@ window.onload = function() {
   dominioElement.innerHTML = dominioAleatorio;
   console.log(generadorDominio(primero, segundo, tercero, finales));
 
-  //final listado aleatorio
-
-  // inicio listado completo e inclusion en index
+  // inicio listado completo e inclusion en index.html
 
   let listaDominiosCompleta = generadorDominio(
     primero,
@@ -60,5 +55,4 @@ window.onload = function() {
     datalistElement.appendChild(option);
   }
   console.log(listaDominiosCompleta);
-  // final listado completo
 };
